@@ -1019,13 +1019,13 @@ jobs:
                 echo "${{ steps.extract_github.outputs.head_in_branch }}"
 
           - name: Download artifact from this branch
-            uses: dawidd6/action-download-artifact@v9
+            uses: dawidd6/action-download-artifact@v11
             with:
                 name: measurements-${{ steps.extract_branch.outputs.branch }}
                 run_id: ${{ github.run_id }}
 
           - name: Download master artifact
-            uses: dawidd6/action-download-artifact@v9
+            uses: dawidd6/action-download-artifact@v11
             with:
                 workflow: ci.yml
                 branch: master
